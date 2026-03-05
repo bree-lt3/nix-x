@@ -8,6 +8,13 @@
       enable = true;
       enableCompletion = true;
 
+      sessionVariables = {
+        BROWSER = "librewolf";
+        EDITOR = "nvim";
+
+        XDG_DOWNLOADS_DIR = "$HOME/downloads/";
+      };
+
       shellAliases = {
         "bye" = "shutdown now";
       };
