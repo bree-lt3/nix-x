@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, lib, ... }:
 
 {
   options.home.bash.enable = lib.mkEnableOption "bash";

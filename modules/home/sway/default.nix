@@ -83,11 +83,11 @@ in {
         bars = [{
           position = "top";
           command = "swaybar";
-          statusCommand = "while $HOME/nixos/modules/home/sway/bar.sh; do sleep 1; done";
+          statusCommand = "while $HOME/nix-x/modules/home/sway/bar.sh; do sleep 1; done";
         }];
         output = {
           eDP-1 = {
-            bg = "$HOME/nixos/modules/home/sway/X1.png stretch";
+            bg = "$HOME/nix-x/modules/home/sway/x1.png stretch";
           };
         };
       };

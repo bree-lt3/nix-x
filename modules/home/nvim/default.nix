@@ -7,6 +7,8 @@
       enable = true;
       defaultEditor = true;
       
+      colorscheme = "ashen";
+      
       imports = [
         ./options.nix
         ./keymaps.nix

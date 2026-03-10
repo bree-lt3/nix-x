@@ -9,7 +9,7 @@
         main = {
           font = "IBM Plex Mono:size=12";
           
-          include = "~/nixos/modules/home/foot/ashen.ini";
+          include = "~/nix-x/modules/home/foot/ashen.ini";
         };
       };
     };
