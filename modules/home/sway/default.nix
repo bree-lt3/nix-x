@@ -93,6 +93,13 @@ in {
           position = "top";
           command = "swaybar";
           statusCommand = "while $HOME/nix-x/modules/home/sway/bar.sh; do sleep 1; done";
+          colors = {
+            focusedWorkspace = {
+              border = "#4c7899";
+              background = "#B14242";
+              text = "#ffffff";
+            };
+          };
         }];
         output = {
           eDP-1 = {
