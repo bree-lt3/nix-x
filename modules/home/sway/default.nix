@@ -15,6 +15,8 @@ in {
   config = lib.mkIf config.home.sway.enable {
     home-manager.users."breanna".wayland.windowManager.sway = {
       enable = true;
+      
+      checkConfig = false;
       config = {
         modifier = "${mod}";
         keybindings = {
@@ -83,6 +85,11 @@ in {
           command = "swaybar";
           statusCommand = "while $HOME/nixos/modules/home/sway/bar.sh; do sleep 1; done";
         }];
+        output = {
+          eDP-1 = {
+            bg = "$HOME/nixos/modules/home/sway/X1.png stretch";
+          };
+        };
       };
     };
   };
