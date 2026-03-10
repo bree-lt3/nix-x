@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, lib, ... }:
 let 
 
 mod = "Mod4";
@@ -80,6 +80,15 @@ in {
           titlebar = false;
         };
         gaps.smartBorders = "on";
+        colors = {
+          focused = {
+            background = "#B14242";
+            border = "#B14242";
+            childBorder = "#B14242";
+            indicator = "#B14242";
+            text = "#B14242";
+          };
+        };
         bars = [{
           position = "top";
           command = "swaybar";
