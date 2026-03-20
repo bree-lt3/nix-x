@@ -12,6 +12,7 @@
         BROWSER = "librewolf";
         EDITOR = "nvim";
 
+        # firefox/librewolf fixes for default downloads dir
         XDG_DOWNLOAD_DIR = "$HOME/downloads";
         DOWNLOADS = "$HOME/downloads";
       };
