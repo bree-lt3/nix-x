@@ -15,7 +15,7 @@
             "select_prev"
             "fallback"
           ];
-          "<C-CR>" = [
+          "<C-l>" = [
             "select_and_accept"
             "fallback"
           ];
