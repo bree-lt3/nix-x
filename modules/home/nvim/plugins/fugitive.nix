@@ -1,0 +1,9 @@
+{ ... }:
+
+{
+  plugins = {
+    fugitive = {
+      enable = true;
+    };
+  };
+}

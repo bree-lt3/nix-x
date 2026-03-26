@@ -3,6 +3,7 @@
 {
   imports = [
     ./ashen.nix
+    ./fugitive.nix
     ./vimtex.nix
     ./markdown-preview.nix
     ./lsp.nix
