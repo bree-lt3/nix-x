@@ -70,7 +70,8 @@ in {
         };
         input = {
           "type:touchpad" = {
-            dwt = "enabled";
+            # disable touchpad while typing (disable bc annoying)
+            dwt = "disabled";
             tap = "enabled";
             natural_scroll = "enabled";
             middle_emulation = "enabled";
