@@ -1,7 +1,15 @@
 # TODO: show WIFI connection if connected, show disconnected if no connection
 
+# Volume
 # TODO: format volume to show percentage and trim characters
 VOLUME=$(wpctl get-volume @DEFAULT_SINK@)
+VOLTRIM=${VOLUME#V*[[:space:]]}
+
+if [[ $VOLTRIM == "0"* ]]; then
+  VOLPERCENT="${VOLTRIM#0.}%"
+elif [[ $VOLTRIM == "1"* ]]; then
+  VOLPERCENT="${VOLTRIM//.}%"
+fi
 
 # Battery
 BATPERCENT=$(cat /sys/class/power_supply/BAT0/capacity)
@@ -17,4 +25,4 @@ fi
 # Date
 DATETIME=$(date +"%D %T")
 
-echo [$VOLUME] [BAT: $BATFORMAT$BATPERCENT%] $DATETIME
+echo [VOL: $VOLPERCENT] [BAT: $BATFORMAT$BATPERCENT%] $DATETIME
