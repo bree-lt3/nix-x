@@ -1,7 +1,6 @@
 # TODO: show WIFI connection if connected, show disconnected if no connection
 
 # Volume
-# TODO: format volume to show percentage and trim characters
 VOLUME=$(wpctl get-volume @DEFAULT_SINK@)
 VOLTRIM=${VOLUME#V*[[:space:]]}
 
