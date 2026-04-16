@@ -15,7 +15,7 @@ BATPERCENT="$(cat /sys/class/power_supply/BAT0/capacity)%"
 BATSTATUS=$(cat /sys/class/power_supply/BAT0/status)
 BATFORMAT=""
 
-if [[ $BATSTATUS == "Charging" || $BATSTUATS == "Full" ]]; then 
+if [[ $BATSTATUS == "Charging" || $BATSTATUS == "Full" ]]; then 
   BATFORMAT="+"
 elif [ $BATSTATUS == "Discharging" ]; then
   BATFORMAT="-"
