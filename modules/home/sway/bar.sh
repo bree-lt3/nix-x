@@ -3,6 +3,7 @@
 # Volume
 VOLUME=$(wpctl get-volume @DEFAULT_SINK@)
 VOLTRIM=${VOLUME#V*[[:space:]]}
+VOLPERCENT=""
 
 if [[ $VOLTRIM == "0"* ]]; then
   VOLPERCENT="${VOLTRIM#0.}%"
