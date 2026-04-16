@@ -12,7 +12,7 @@ elif [[ $VOLTRIM == "1"* ]]; then
 fi
 
 # Battery
-BATPERCENT=$(cat /sys/class/power_supply/BAT0/capacity)
+BATPERCENT="$(cat /sys/class/power_supply/BAT0/capacity)%"
 BATSTATUS=$(cat /sys/class/power_supply/BAT0/status)
 BATFORMAT=""
 
@@ -25,4 +25,4 @@ fi
 # Date
 DATETIME=$(date +"%D %T")
 
-echo [VOL: $VOLPERCENT] [BAT: $BATFORMAT$BATPERCENT%] $DATETIME
+echo [VOL: $VOLPERCENT] [BAT: $BATFORMAT$BATPERCENT] $DATETIME
