@@ -34,6 +34,8 @@ in {
           "${mod}+space" = "exec ${menu}";
           "${mod}+Shift+q" = "kill";
           "${mod}+f" = "fullscreen";
+          "${mod}+t" = "floating toggle";
+          "${mod}+Shift+t" = "focus mode_toggle";
 
           "${mod}+Shift+e" = "exit";
           "${mod}+Shift+r" = "reload";
