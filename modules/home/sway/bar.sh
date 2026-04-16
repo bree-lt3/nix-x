@@ -1,6 +1,6 @@
 # TODO: show WIFI connection if connected, show disconnected if no connection
 
-# TODO: format volume to show percentage
+# TODO: format volume to show percentage and trim characters
 VOLUME=$(wpctl get-volume @DEFAULT_SINK@)
 
 # Battery
@@ -8,7 +8,7 @@ BATPERCENT=$(cat /sys/class/power_supply/BAT0/capacity)
 BATSTATUS=$(cat /sys/class/power_supply/BAT0/status)
 BATFORMAT=""
 
-if [ $BATSTATUS == "Charging" ]; then 
+if [[ $BATSTATUS == "Charging" || $BATSTUATS == "Full" ]]; then 
   BATFORMAT="+"
 elif [ $BATSTATUS == "Discharging" ]; then
   BATFORMAT="-"
