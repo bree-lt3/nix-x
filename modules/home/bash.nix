@@ -9,13 +9,21 @@
       enableCompletion = true;
 
       sessionVariables = {
+        # Preserve PS1 in nixshell
+        NIX_SHELL_PRESERVE_PROMPT = 1;
+
         BROWSER = "librewolf";
         EDITOR = "nvim";
 
-        # firefox/librewolf fixes for default downloads dir
+        # TODO: look into firefox/librewolf fixes for default downloads dir
         XDG_DOWNLOAD_DIR = "$HOME/downloads";
         DOWNLOADS = "$HOME/downloads";
       };
+
+      initExtra = ''
+        . $HOME/.nix-profile/share/git/contrib/completion/git-prompt.sh
+        export PS1='\n[\e[1;36m\h\e[0m]\e[1;33m$(__git_ps1 " (%s)")\e[0m \e[1;32m\w\e[0m\n\e[1;31m(^,.,^)>\e[0m '
+      '';
 
       shellAliases = {
         "bye" = "shutdown now";
