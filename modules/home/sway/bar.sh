@@ -11,10 +11,14 @@ VOLUME=$(wpctl get-volume @DEFAULT_SINK@)
 VOLTRIM=${VOLUME#V*[[:space:]]}
 VOLPERCENT=""
 
-if [[ $VOLTRIM == "0"* ]]; then
-  VOLPERCENT="${VOLTRIM#0.}%"
-elif [[ $VOLTRIM == "1"* ]]; then
-  VOLPERCENT="${VOLTRIM//.}%"
+if [[ $VOLTRIM == *"MUTED"* ]]; then
+  VOLPERCENT="muted"
+else
+  if [[ $VOLTRIM == "0"* ]]; then
+    VOLPERCENT="${VOLTRIM#0.}%"
+  elif [[ $VOLTRIM == "1"* ]]; then
+    VOLPERCENT="${VOLTRIM//.}%"
+  fi
 fi
 
 # Battery
