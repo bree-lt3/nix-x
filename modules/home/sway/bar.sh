@@ -18,8 +18,6 @@ BATFORMAT=""
 
 if [[ $BATSTATUS == "Charging" || $BATSTATUS == "Full" ]]; then 
   BATFORMAT="+"
-elif [[ $BATSTATUS == "Discharging" || $BATSTATUS == "Not charging" ]]; then
-  BATFORMAT="-"
 fi
 
 # Date
