@@ -1,4 +1,10 @@
-# TODO: show WIFI connection if connected, show disconnected if no connection
+# WIFI
+WIFI=$(nmcli -g NAME,TYPE connection show --active | grep 802-11-wireless)
+if [[ -z $WIFI ]]; then
+  WIFINAME="none"
+else
+  WIFINAME="${WIFI%%:*}"
+fi
 
 # Volume
 VOLUME=$(wpctl get-volume @DEFAULT_SINK@)
@@ -23,4 +29,4 @@ fi
 # Date
 DATETIME=$(date +"%D %T")
 
-echo [VOL: $VOLPERCENT] [BAT: $BATFORMAT$BATPERCENT] $DATETIME
+echo [CON: $WIFINAME] [VOL: $VOLPERCENT] [BAT: $BATFORMAT$BATPERCENT] $DATETIME
