@@ -7,7 +7,7 @@
       enable = true;
       settings = {
         main = {
-          font = "IBM Plex Mono:size=12";
+          font = "IBM Plex Mono:size=14";
           
           include = "~/nix-x/modules/home/foot/ashen.ini";
         };
