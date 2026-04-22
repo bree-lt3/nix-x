@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, lib, ... }:
 
 {
   options.home.nvim.enable = lib.mkEnableOption "nvim";
