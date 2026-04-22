@@ -6,7 +6,7 @@
   # TODO: seperate from home/nixos modules
     environment.systemPackages = with pkgs; [
       #TODO: move to home-manager
-      bemenu
+      #bemenu
       grim
       slurp
       wl-clipboard

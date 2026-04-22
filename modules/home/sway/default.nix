@@ -8,7 +8,7 @@ up = "k";
 right = "l";
 
 term = "foot";
-menu = "bemenu-run - i";
+menu = "bemenu-run -i";
 
 in {
   options.home.sway.enable = lib.mkEnableOption "sway";

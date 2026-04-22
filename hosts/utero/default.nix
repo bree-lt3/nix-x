@@ -60,6 +60,7 @@ inputs.nixpkgs.lib.nixosSystem {
         git.enable = true;
         sway.enable = true;
         foot.enable = true;
+        bemenu.enable = true;
         etc.enable = true;
       };
 

@@ -11,6 +11,7 @@
     ./git.nix
     ./sway
     ./foot
+    ./bemenu.nix
     ./etc.nix
   ];
 
