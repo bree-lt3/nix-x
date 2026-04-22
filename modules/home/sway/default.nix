@@ -96,6 +96,10 @@ in {
           position = "top";
           command = "swaybar";
           statusCommand = "while $HOME/nix-x/modules/home/sway/bar.sh; do sleep 1; done";
+          fonts = {
+            names = [ "IBM Plex Mono" ];
+            size = 10.0;
+          };
           colors = {
             focusedWorkspace = {
               border = "#4c7899";
