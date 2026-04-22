@@ -9,7 +9,7 @@
       enable = true;
       highlight.enable = true;
 
-      grammerPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammers; [
+      grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
         bash
         c
         css
@@ -18,7 +18,6 @@
         java
         javascript
         json
-        jsonc
         latex
         lua
         markdown

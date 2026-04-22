@@ -22,7 +22,9 @@
 
       initExtra = ''
         . $HOME/.nix-profile/share/git/contrib/completion/git-prompt.sh
-        export PS1='\n[\e[1;36m\h\e[0m]\e[1;33m$(__git_ps1 " (%s)")\e[0m \e[1;32m\w\e[0m\n\e[1;31m(^,.,^)>\e[0m '
+        . $HOME/.scripts/changeface.sh
+
+        export PS1='[\h] $(__git_ps1 "(%s) ")\W $(__changeface)> '
       '';
 
       shellAliases = {
