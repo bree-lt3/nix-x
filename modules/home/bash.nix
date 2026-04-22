@@ -23,8 +23,9 @@
       initExtra = ''
         . $HOME/.nix-profile/share/git/contrib/completion/git-prompt.sh
         . $HOME/.scripts/changeface.sh
+        . $HOME/.scripts/inshell.sh
 
-        export PS1='[\h] $(__git_ps1 "(%s) ")\W $(__changeface)> '
+        export PS1=' [\h] $(__git_ps1 "(%s) ")$(__inshell) $(__changeface)> '
       '';
 
       shellAliases = {

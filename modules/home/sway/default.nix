@@ -108,11 +108,11 @@ in {
             };
           };
         }];
-        output = {
-          eDP-1 = {
-            bg = "$HOME/nix-x/modules/home/sway/x1.png stretch";
-          };
-        };
+#        output = {
+#          eDP-1 = {
+#            bg = "$HOME/nix-x/modules/home/sway/x1.png stretch";
+#          };
+#        };
       };
     };
   };
