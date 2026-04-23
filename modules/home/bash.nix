@@ -29,6 +29,7 @@
       '';
 
       shellAliases = {
+        "v" = "nvim";
         "bye" = "shutdown now";
       };
 

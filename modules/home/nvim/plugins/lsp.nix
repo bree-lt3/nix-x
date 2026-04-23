@@ -8,6 +8,7 @@
         clangd.enable = true;
         cssls.enable = true;
         emmet_ls.enable = true;
+        glsl_analyzer.enable = true;
         html.enable = true;
         lua_ls.enable = true;
         nil_ls.enable = true;
