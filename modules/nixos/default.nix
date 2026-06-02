@@ -2,8 +2,9 @@
 
 {
   imports = [
-    ./etc.nix
+    ./users.nix
     ./tlp.nix
     ./bluetooth.nix
+    ./etc.nix
   ];
 }

@@ -37,14 +37,7 @@ inputs.nixpkgs.lib.nixosSystem {
       # TODO: is needed?
       services.libinput.enable = true;
 
-      # TODO: module and set hash passwd 
-      users.users.breanna = {
-        isNormalUser = true;
-        description = "Breanna";
-        extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-        home = "/home/breanna";
-      };
-
+      # think i need this ?
       programs.sway = {
         enable = true;
         wrapperFeatures.gtk = true;
