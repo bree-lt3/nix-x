@@ -8,6 +8,7 @@
       vim
       wget
       git
+      zip
       unzip
 
       fastfetch

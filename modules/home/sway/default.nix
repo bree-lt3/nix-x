@@ -110,7 +110,7 @@ in {
         }];
 #        output = {
 #          eDP-1 = {
-#            bg = "$HOME/nix-x/modules/home/sway/x1.png stretch";
+#            bg = "$HOME/nix-x/modules/home/sway/gun.jpg fill";
 #          };
 #        };
       };

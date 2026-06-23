@@ -9,8 +9,10 @@
         grim
         slurp
         wl-clipboard
+        curl
 
-        librewolf
+        # not maintained ?
+        #librewolf
         firefox
 
         #discord
