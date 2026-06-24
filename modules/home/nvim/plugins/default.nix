@@ -7,7 +7,7 @@
     ./vimtex.nix
     ./markdown-preview.nix
     ./lsp.nix
-    ./treesitter.nix
+    #./treesitter.nix
     ./blink-cmp.nix
     ./telescope.nix
   ];
