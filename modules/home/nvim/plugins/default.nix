@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./ashen.nix
+    ./fogbell.nix
     ./fugitive.nix
     ./vimtex.nix
     ./markdown-preview.nix

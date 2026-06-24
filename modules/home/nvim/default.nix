@@ -7,7 +7,7 @@
       enable = true;
       defaultEditor = true;
       
-      colorscheme = "ashen";
+      colorscheme = "fogbell";
       
       imports = [
         ./options.nix
