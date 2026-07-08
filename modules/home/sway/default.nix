@@ -85,11 +85,11 @@ in {
         gaps.smartBorders = "on";
         colors = {
           focused = {
-            background = "#B14242";
-            border = "#B14242";
-            childBorder = "#B14242";
-            indicator = "#B14242";
-            text = "#B14242";
+            background = "#f7f7f7";
+            border = "#f7f7f7";
+            childBorder = "#f7f7f7";
+            indicator = "#f7f7f7";
+            text = "#f7f7f7";
           };
         };
         bars = [{
@@ -101,18 +101,20 @@ in {
             size = 10.0;
           };
           colors = {
+            background = "#101010";
             focusedWorkspace = {
               border = "#4c7899";
-              background = "#B14242";
-              text = "#ffffff";
+              background = "#f7f7f7";
+              text = "#101010";
             };
+            statusline = "f7f7f7";
           };
         }];
-#        output = {
-#          eDP-1 = {
-#            bg = "$HOME/nix-x/modules/home/sway/gun.jpg fill";
-#          };
-#        };
+        output = {
+          eDP-1 = {
+            bg = "#101010 solid_color";
+          };
+        };
       };
     };
   };

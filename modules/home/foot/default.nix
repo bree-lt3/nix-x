@@ -8,6 +8,7 @@
       settings = {
         main = {
           font = "IBM Plex Mono:size=14";
+          include = "~/nix-x/modules/home/foot/theme.ini";
         };
       };
     };

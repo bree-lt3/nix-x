@@ -31,6 +31,8 @@
       shellAliases = {
         "v" = "nvim";
         "bye" = "shutdown now";
+        "ls" = "ls -F";
+        "ll" = "ls -FAlh";
       };
 
       bashrcExtra = "[[ $(tty) == /dev/tty1 ]] && exec sway";
