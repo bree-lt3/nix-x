@@ -7,6 +7,8 @@
       enable = true;
       settings = {
         line-height = 24;
+        tf = "#7c7c7c";
+        hf = "#7c7c7c";
       };
     };
   };

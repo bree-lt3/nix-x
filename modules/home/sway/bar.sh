@@ -16,7 +16,7 @@ if [[ $VOLTRIM == *"MUTED"* ]]; then
 else
   if [[ $VOLTRIM == "0"* ]]; then
     VOLPERCENT="${VOLTRIM#0.}%"
-  elif [[ $VOLTRIM == "1"* ]]; then
+  else
     VOLPERCENT="${VOLTRIM//.}%"
   fi
 fi
