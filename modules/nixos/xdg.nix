@@ -10,6 +10,7 @@
         wlr.settings = {
           screencast = {
             chooser_type = "dmenu";
+            # TODO: figure out how to get bemenu config settings working
             chooser_cmd = "${pkgs.bemenu}/bin/bemenu";
             max_fps = 30;
           };
