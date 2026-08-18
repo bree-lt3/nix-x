@@ -1,0 +1,9 @@
+{ ... }:
+
+{
+  plugins = {
+    jdtls = {
+      enable = true;
+    };
+  };
+}

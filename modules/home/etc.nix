@@ -14,6 +14,7 @@
         # not maintained ?
         #librewolf
         firefox
+        obs-studio
 
         #discord
         zathura
