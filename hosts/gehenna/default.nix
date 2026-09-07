@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, config, lib, ... }:
 
 inputs.nixpkgs.lib.nixosSystem {
   specialArgs = { inherit inputs; };
@@ -32,6 +32,21 @@ inputs.nixpkgs.lib.nixosSystem {
       hardware.graphics = {
         enable = true;
         enable32Bit = true;
+      };
+
+      nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+        "nvidia-settings"
+      ];
+      
+      services.xserver.videoDrivers = ["nvidia"];
+
+      hardware.nvidia = {
+        modesetting.enable = true;
+        powerManagement.enable = false;
+        powerManagement.finegrained = false;
+        open = true;
+        nvidiaSettings = true;
+        package = config.boot.kernelPackages.nvidiaPackages.stable;
       };
       
       # TODO: is needed?

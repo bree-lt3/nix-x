@@ -33,7 +33,7 @@ inputs.nixpkgs.lib.nixosSystem {
         enable = true;
         enable32Bit = true;
       };
-      
+
       # TODO: is needed?
       services.libinput.enable = true;
 

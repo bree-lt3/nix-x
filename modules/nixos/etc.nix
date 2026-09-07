@@ -3,6 +3,10 @@
 {
   options.etc.enable = lib.mkEnableOption "etc";
   config = lib.mkIf config.etc.enable {
+    nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+      "steam"
+    ];
+
     environment.systemPackages = with pkgs; [
       htop
       vim

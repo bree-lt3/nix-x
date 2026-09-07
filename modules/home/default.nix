@@ -15,5 +15,6 @@
     ./etc.nix
   ];
 
+  # need to change this for gehenna
   home-manager.users."breanna".home.stateVersion = "25.11";
 }
