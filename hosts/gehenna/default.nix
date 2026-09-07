@@ -1,4 +1,4 @@
-{ inputs, config, lib, ... }:
+{ inputs, ... }:
 
 inputs.nixpkgs.lib.nixosSystem {
   specialArgs = { inherit inputs; };
@@ -34,20 +34,8 @@ inputs.nixpkgs.lib.nixosSystem {
         enable32Bit = true;
       };
 
-      nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-        "nvidia-settings"
-      ];
-      
       services.xserver.videoDrivers = ["nvidia"];
 
-      hardware.nvidia = {
-        modesetting.enable = true;
-        powerManagement.enable = false;
-        powerManagement.finegrained = false;
-        open = true;
-        nvidiaSettings = true;
-        package = config.boot.kernelPackages.nvidiaPackages.stable;
-      };
       
       # TODO: is needed?
       services.libinput.enable = true;
@@ -65,7 +53,11 @@ inputs.nixpkgs.lib.nixosSystem {
         bash.enable = true;
         nvim.enable = true;
         git.enable = true;
-        sway.enable = true;
+        sway = { 
+          enable = true;
+          output = { 
+          "DP-3" = { mode = "1920x1080@239.760Hz"; };
+        };
         foot.enable = true;
         bemenu.enable = true;
         etc.enable = true;

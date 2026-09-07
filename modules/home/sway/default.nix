@@ -11,7 +11,19 @@ term = "foot";
 menu = "bemenu-run -i --binding vim --vim-esc-exits";
 
 in {
-  options.home.sway.enable = lib.mkEnableOption "sway";
+  options.home.sway = { 
+    enable = lib.mkEnableOption "sway"; 
+    output = lib.mkOption {
+        description = "sway outputs here!!";
+        type = lib.types.attrs;
+        default = {
+          eDP-1 = {
+            bg = "#101010 solid_color";
+          };
+        };
+    };
+  };
+
   config = lib.mkIf config.home.sway.enable {
     home-manager.users."breanna".wayland.windowManager.sway = {
       enable = true;
@@ -111,11 +123,7 @@ in {
             statusline = "f7f7f7";
           };
         }];
-        output = {
-          eDP-1 = {
-            bg = "#101010 solid_color";
-          };
-        };
+        output = config.breanna.home.sway.output;
       };
     };
   };

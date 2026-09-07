@@ -5,6 +5,8 @@
   config = lib.mkIf config.etc.enable {
     nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
       "steam"
+      "nvidia-x11"
+      "nvidia-settings"
     ];
 
     environment.systemPackages = with pkgs; [
