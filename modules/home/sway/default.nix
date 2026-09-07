@@ -123,7 +123,7 @@ in {
             statusline = "f7f7f7";
           };
         }];
-        output = config.breanna.home.sway.output;
+        output = config.home.sway.output;
       };
     };
   };

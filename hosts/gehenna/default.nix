@@ -56,7 +56,10 @@ inputs.nixpkgs.lib.nixosSystem {
         sway = { 
           enable = true;
           output = { 
-          "DP-3" = { mode = "1920x1080@239.760Hz"; };
+            "DP-3" = { 
+              mode = "1920x1080@239.760Hz"; 
+            };
+          };
         };
         foot.enable = true;
         bemenu.enable = true;

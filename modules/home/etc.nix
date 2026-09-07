@@ -16,7 +16,8 @@
         firefox
         obs-studio
 
-        #discord
+        steam
+        discord
         zathura
         krita
         blender
