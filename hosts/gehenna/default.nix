@@ -43,7 +43,6 @@ inputs.nixpkgs.lib.nixosSystem {
         wrapperFeatures.gtk = true;
       };
 
-      users.enable = true;
       etc.enable = true;
       xdg.enable = true;
 
