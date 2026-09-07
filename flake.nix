@@ -20,7 +20,8 @@
     in
     {
      nixosConfigurations = {
-        utero = import ./hosts/utero { inherit inputs; };
+	gehenna = import ./hosts/gehenna { inherit inputs; };
+        utero   = import ./hosts/utero { inherit inputs; };
       };
     };
 }
