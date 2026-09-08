@@ -12,6 +12,8 @@
     ./sway
     ./foot
     ./bemenu.nix
+    ./discord.nix
+    ./steam.nix
     ./etc.nix
   ];
 

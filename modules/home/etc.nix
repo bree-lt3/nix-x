@@ -16,8 +16,6 @@
         firefox
         obs-studio
 
-        steam
-        discord
         zathura
         krita
         blender

@@ -3,15 +3,6 @@
 {
   options.etc.enable = lib.mkEnableOption "etc";
   config = lib.mkIf config.etc.enable {
-    # modules maybe
-    nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-      "nvidia-x11"
-      "nvidia-settings"
-      "steam"
-      "steam-unwrapped"
-      "discord"
-    ];
-
     environment.systemPackages = with pkgs; [
       htop
       vim
