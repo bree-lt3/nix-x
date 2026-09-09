@@ -16,9 +16,12 @@
         firefox
         obs-studio
 
+<<<<<<< HEAD
         steam
         gamemode
         discord
+=======
+>>>>>>> 87ccb202debf94d66ed2f0327cf8084721685e15
         zathura
         krita
         blender

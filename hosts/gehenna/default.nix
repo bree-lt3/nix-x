@@ -8,6 +8,7 @@ inputs.nixpkgs.lib.nixosSystem {
     inputs.home-manager.nixosModules.default
     ../../modules/nixos
     ../../modules/home
+    ../../modules/gehenna
     {
       nix.settings.experimental-features = [ "nix-command" "flakes"];
       boot.loader.systemd-boot.enable = true;
@@ -35,7 +36,6 @@ inputs.nixpkgs.lib.nixosSystem {
       };
 
       services.xserver.videoDrivers = ["nvidia"];
-
       
       # TODO: is needed?
       services.libinput.enable = true;
@@ -63,6 +63,8 @@ inputs.nixpkgs.lib.nixosSystem {
         };
         foot.enable = true;
         bemenu.enable = true;
+        steam.enable = true;
+        discord.enable = true;
         etc.enable = true;
       };
 
