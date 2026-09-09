@@ -35,7 +35,7 @@
         "ll" = "ls -FAlh";
       };
 
-      bashrcExtra = "[[ $(tty) == /dev/tty1 ]] && exec sway";
+      bashrcExtra = "[[ $(tty) == /dev/tty1 ]] && exec sway --unsupported-gpu";
     };
   };
 }

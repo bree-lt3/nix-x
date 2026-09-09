@@ -17,6 +17,7 @@
         obs-studio
 
         steam
+        gamemode
         discord
         zathura
         krita
