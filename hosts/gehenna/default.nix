@@ -8,7 +8,6 @@ inputs.nixpkgs.lib.nixosSystem {
     inputs.home-manager.nixosModules.default
     ../../modules/nixos
     ../../modules/home
-    ../../modules/gehenna
     {
       nix.settings.experimental-features = [ "nix-command" "flakes"];
       boot.loader.systemd-boot.enable = true;
@@ -22,6 +21,7 @@ inputs.nixpkgs.lib.nixosSystem {
       networking.hostName = "gehenna";
 
       # TODO: make module
+      networking.dhcpcd.enable = true;
       networking.networkmanager.enable = true;
 
       services.pipewire = {
@@ -48,6 +48,8 @@ inputs.nixpkgs.lib.nixosSystem {
 
       etc.enable = true;
       xdg.enable = true;
+      # TODO: CHECK THIS ITS UNALLOWED PKGS MAKE IT NICER PLZ
+      idk.enable = true;
 
       home = {
         bash.enable = true;
