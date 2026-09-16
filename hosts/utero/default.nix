@@ -52,7 +52,18 @@ inputs.nixpkgs.lib.nixosSystem {
         bash.enable = true;
         nvim.enable = true;
         git.enable = true;
-        sway.enable = true;
+        sway = {
+          enable = true;
+          input = {
+            "type:touchpad" = {
+              # disable touchpad while typing (disable bc annoying)
+              dwt = "disabled";
+              tap = "enabled";
+              natural_scroll = "enabled";
+              middle_emulation = "enabled";
+            };
+          };
+        };
         foot.enable = true;
         bemenu.enable = true;
         etc.enable = true;

@@ -13,14 +13,19 @@ menu = "bemenu-run -i --binding vim --vim-esc-exits";
 in {
   options.home.sway = { 
     enable = lib.mkEnableOption "sway"; 
+    input = lib.mkOption {
+      description = "sway inputs here";
+      type = lib.types.attrs;
+      default = {};
+    };
     output = lib.mkOption {
-        description = "sway outputs here!!";
-        type = lib.types.attrs;
-        default = {
-          eDP-1 = {
-            bg = "#101010 solid_color";
-          };
+      description = "sway outputs here!!";
+      type = lib.types.attrs;
+      default = {
+        eDP-1 = {
+          bg = "#101010 solid_color";
         };
+      };
     };
   };
 
@@ -82,15 +87,6 @@ in {
           "Print" = "exec grim - | tee ~/media/screenshots/screenshot-$(date +%Y%m%d-%H%M%S).png | wl-copy";
           "XF86SelectiveScreenshot" = "exec slurp | grim -g - - | tee ~/media/screenshots/screenshot-$(date +%Y%m%d-%H%M%S).png | wl-copy";
         };
-        input = {
-          "type:touchpad" = {
-            # disable touchpad while typing (disable bc annoying)
-            dwt = "disabled";
-            tap = "enabled";
-            natural_scroll = "enabled";
-            middle_emulation = "enabled";
-          };
-        };
         window =  {
           titlebar = false;
         };
@@ -123,6 +119,7 @@ in {
             statusline = "f7f7f7";
           };
         }];
+        input = config.home.sway.input;
         output = config.home.sway.output;
       };
     };
