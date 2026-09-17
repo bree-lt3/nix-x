@@ -11,9 +11,7 @@
         wl-clipboard
         curl
 
-        # not maintained ?
         librewolf
-        firefox
         obs-studio
 
         gamemode
