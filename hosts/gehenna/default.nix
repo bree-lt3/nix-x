@@ -57,6 +57,14 @@ inputs.nixpkgs.lib.nixosSystem {
         git.enable = true;
         sway = { 
           enable = true;
+          input = {
+            "13159:6500:Endgame_Gear_Endgame_Gear_OP1_8k_Gaming_Mouse" = {
+              accel_profile = "flat";
+              pointer_accel = "0";
+              natural_scroll = "disabled";
+              left_handed = "disabled";
+            };
+          };
           output = { 
             "DP-3" = { 
               mode = "1920x1080@239.760Hz"; 

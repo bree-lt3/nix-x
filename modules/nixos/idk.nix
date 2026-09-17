@@ -10,6 +10,7 @@
       "steam"
       "steam-unwrapped"
       "discord"
+      "discord-unwrapped"
     ];
   };
 }
