@@ -67,6 +67,7 @@ inputs.nixpkgs.lib.nixosSystem {
         bemenu.enable = true;
         steam.enable = true;
         discord.enable = true;
+        xdg.enable = true;
         etc.enable = true;
       };
 
