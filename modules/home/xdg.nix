@@ -9,7 +9,7 @@
         setSessionVariables = false;
         desktop = "null";
         documents = "null";
-        download = "$HOME/Downloads";
+        download = "$HOME/downloads";
         music = "null";
         pictures = "null";
         projects = "null";

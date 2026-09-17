@@ -18,6 +18,6 @@
     ./etc.nix
   ];
 
-  # need to change this for gehenna
+  # TODO: look at this for gehenna vs utero
   home-manager.users."breanna".home.stateVersion = "25.11";
 }
