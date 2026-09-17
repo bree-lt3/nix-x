@@ -7,7 +7,13 @@
       userDirs = {
         enable = true;
         setSessionVariables = false;
+        desktop = "null";
+        documents = "null";
         download = "$HOME/Downloads";
+        music = "null";
+        pictures = "null";
+        projects = "null";
+        videos = "null";
       };
     };
   };
