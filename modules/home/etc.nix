@@ -12,7 +12,7 @@
         curl
 
         # not maintained ?
-        #librewolf
+        librewolf
         firefox
         obs-studio
 

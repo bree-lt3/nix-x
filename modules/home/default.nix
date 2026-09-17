@@ -14,6 +14,7 @@
     ./bemenu.nix
     ./discord.nix
     ./steam.nix
+    ./xdg.nix
     ./etc.nix
   ];
 
