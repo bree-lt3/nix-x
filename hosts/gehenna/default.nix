@@ -47,6 +47,7 @@ inputs.nixpkgs.lib.nixosSystem {
       };
 
       etc.enable = true;
+      # not working ?
       xdg.enable = true;
       # TODO: CHECK THIS ITS UNALLOWED PKGS MAKE IT NICER PLZ
       idk.enable = true;
