@@ -9,12 +9,13 @@
     ./bash.nix
     ./nvim
     ./git.nix
+    ./xdg.nix
     ./sway
     ./foot
+    ./tmux.nix
     ./bemenu.nix
     ./discord.nix
     ./steam.nix
-    ./xdg.nix
     ./etc.nix
   ];
 

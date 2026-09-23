@@ -55,6 +55,7 @@ inputs.nixpkgs.lib.nixosSystem {
         bash.enable = true;
         nvim.enable = true;
         git.enable = true;
+        xdg.enable = true;
         sway = { 
           enable = true;
           input = {
@@ -72,10 +73,10 @@ inputs.nixpkgs.lib.nixosSystem {
           };
         };
         foot.enable = true;
+        tmux.enable = true;
         bemenu.enable = true;
         steam.enable = true;
         discord.enable = true;
-        xdg.enable = true;
         etc.enable = true;
       };
 
