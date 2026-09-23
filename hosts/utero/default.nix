@@ -65,6 +65,7 @@ inputs.nixpkgs.lib.nixosSystem {
           };
         };
         foot.enable = true;
+        tmux.enable = true;
         bemenu.enable = true;
         xdg.enable = true;
         etc.enable = true;
