@@ -76,6 +76,7 @@ inputs.nixpkgs.lib.nixosSystem {
         foot.enable = true;
         tmux.enable = true;
         bemenu.enable = true;
+        bitwarden.enable = true;
         steam.enable = true;
         discord.enable = true;
         etc.enable = true;

@@ -68,6 +68,7 @@ inputs.nixpkgs.lib.nixosSystem {
         tmux.enable = true;
         bemenu.enable = true;
         xdg.enable = true;
+        bitwarden.enable = true;
         etc.enable = true;
       };
 

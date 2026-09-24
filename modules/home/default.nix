@@ -14,6 +14,7 @@
     ./foot
     ./tmux.nix
     ./bemenu.nix
+    ./bitwarden.nix
     ./discord.nix
     ./steam.nix
     ./etc.nix
