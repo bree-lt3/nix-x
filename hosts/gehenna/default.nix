@@ -26,9 +26,15 @@ inputs.nixpkgs.lib.nixosSystem {
 
       services.pipewire = {
         enable = true;
+        alsa.enable = true;
+        alsa.support32Bit = true;
         pulse.enable = true;
+        wireplumber.enable = true;
+        jack.enable = true;
       };
       
+      security.rtkit.enable = true;
+
       # TODO: maybe make module or place in hardware.nix?
       hardware.graphics = {
         enable = true;
@@ -81,6 +87,9 @@ inputs.nixpkgs.lib.nixosSystem {
         discord.enable = true;
         etc.enable = true;
       };
+
+      programs.steam.enable = true;
+      hardware.steam-hardware.enable = true;
 
       # >,..,<
       system.stateVersion = "26.05"; 

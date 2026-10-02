@@ -4,7 +4,6 @@
   options.home.steam.enable = lib.mkEnableOption "steam";
   config = lib.mkIf config.home.steam.enable {
     home-manager.users."breanna".home.packages = with pkgs; [
-      steam
       protontricks
     ];
   };

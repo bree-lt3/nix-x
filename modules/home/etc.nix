@@ -10,6 +10,7 @@
         slurp
         wl-clipboard
         curl
+        pavucontrol
 
         librewolf
         obs-studio
