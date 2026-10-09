@@ -5,6 +5,9 @@
   config = lib.mkIf config.home.steam.enable {
     home-manager.users."breanna".home.packages = with pkgs; [
       protontricks
+      unityhub
+      vrc-get
+      alcom
     ];
   };
 }

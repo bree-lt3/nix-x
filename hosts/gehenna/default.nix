@@ -57,6 +57,7 @@ inputs.nixpkgs.lib.nixosSystem {
       xdg.enable = true;
       # TODO: CHECK THIS ITS UNALLOWED PKGS MAKE IT NICER PLZ
       idk.enable = true;
+      unity.enable = true;
 
       home = {
         bash.enable = true;

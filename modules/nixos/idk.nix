@@ -11,6 +11,8 @@
       "steam-unwrapped"
       "discord"
       "discord-unwrapped"
+      "unityhub"
+      "corefonts"
     ];
   };
 }

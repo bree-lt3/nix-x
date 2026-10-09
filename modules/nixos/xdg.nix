@@ -6,6 +6,7 @@
     xdg = {
       portal = {
         enable = true;
+        xdgOpenUsePortal = true;
         wlr.enable = true;
         wlr.settings = {
           screencast = {
