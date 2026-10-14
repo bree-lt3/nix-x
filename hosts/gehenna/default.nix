@@ -41,6 +41,14 @@ inputs.nixpkgs.lib.nixosSystem {
         enable32Bit = true;
       };
 
+      hardware.nvidia = {
+        modesetting.enable = true;
+        powerManagement.enable = false;
+        powerManagement.finegrained = false;
+        open = true;
+        nvidiaSettings = true;
+      };
+
       services.xserver.videoDrivers = ["nvidia"];
       
       # TODO: is needed?
@@ -57,7 +65,9 @@ inputs.nixpkgs.lib.nixosSystem {
       xdg.enable = true;
       # TODO: CHECK THIS ITS UNALLOWED PKGS MAKE IT NICER PLZ
       idk.enable = true;
+
       unity.enable = true;
+      programs.nix-ld.enable = true;
 
       home = {
         bash.enable = true;
