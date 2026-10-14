@@ -35,6 +35,8 @@ inputs.nixpkgs.lib.nixosSystem {
       
       security.rtkit.enable = true;
 
+      services.xserver.videoDrivers = ["nvidia"];
+
       # TODO: maybe make module or place in hardware.nix?
       hardware.graphics = {
         enable = true;
@@ -48,8 +50,6 @@ inputs.nixpkgs.lib.nixosSystem {
         open = true;
         nvidiaSettings = true;
       };
-
-      services.xserver.videoDrivers = ["nvidia"];
       
       # TODO: is needed?
       services.libinput.enable = true;
@@ -59,11 +59,6 @@ inputs.nixpkgs.lib.nixosSystem {
         enable = true;
         wrapperFeatures.gtk = true;
       };
-
-      #XFCE
-      #services.xserver.enable = true;
-      #services.xserver.desktopManager.xfce.enable = true;
-      #services.xserver.displayManager.startx.enable = true;
 
       etc.enable = true;
       # not working ?
