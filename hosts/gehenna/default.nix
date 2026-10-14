@@ -60,6 +60,11 @@ inputs.nixpkgs.lib.nixosSystem {
         wrapperFeatures.gtk = true;
       };
 
+      #XFCE
+      #services.xserver.enable = true;
+      #services.xserver.desktopManager.xfce.enable = true;
+      #services.xserver.displayManager.startx.enable = true;
+
       etc.enable = true;
       # not working ?
       xdg.enable = true;

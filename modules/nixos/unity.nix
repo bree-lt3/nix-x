@@ -2,7 +2,7 @@
 
 let
   unityVersion = "2022.3.22f1";
-  editor = "/home/breanna/Unity/Hub/Editor/${unityVersion}/Editor/Unity";
+  editor = "/home/breanna/storage/Unity/Hub/Editor/${unityVersion}/Editor/Unity";
 
   unityFhs = pkgs.writeShellScriptBin "unity-fhs" ''
     exec -a "${editor}" \
