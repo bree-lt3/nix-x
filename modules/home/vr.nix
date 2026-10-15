@@ -3,7 +3,7 @@
 {
   options.home.vr.enable = lib.mkEnableOption "vr";
   config = lib.mkIf config.home.vr.enable {
-    home-manager.users."breanna".xdg = {
+    home-manager.users."breanna" = { config, ... }: {
       # xrizer for steam games
       xdg.configFile."openvr/openvrpaths.vrpath".text = let
         steam = "${config.xdg.dataHome}/Steam";
