@@ -15,7 +15,6 @@
     ./tmux.nix
     ./bemenu.nix
     ./bitwarden.nix
-    ./discord.nix
     ./vr.nix
     ./etc.nix
   ];

@@ -3,6 +3,11 @@
 {
   options.steam.enable = lib.mkEnableOption "steam";
   config = lib.mkIf config.steam.enable {
+    nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+      "steam"
+      "steam-unwrapped"
+    ];
+
     programs.steam = {
       enable = true;
       package = pkgs.steam.override {

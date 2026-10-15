@@ -13,6 +13,11 @@ in
 {
   options.unity.enable = lib.mkEnableOption "unity";
   config = lib.mkIf config.unity.enable {
+    nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+      "unityhub"
+      "corefonts"
+    ];
+
     environment.systemPackages = with pkgs; [
       unityhub
       vrc-get

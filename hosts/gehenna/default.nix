@@ -55,9 +55,8 @@ inputs.nixpkgs.lib.nixosSystem {
       etc.enable = true;
       # not working ?
       xdg.enable = true;
-      # TODO: CHECK THIS ITS UNALLOWED PKGS MAKE IT NICER PLZ
-      idk.enable = true;
 
+      discord.enable = true;
       unity.enable = true;
       steam.enable = true;
       programs.nix-ld.enable = true;
@@ -87,8 +86,8 @@ inputs.nixpkgs.lib.nixosSystem {
         tmux.enable = true;
         bemenu.enable = true;
         bitwarden.enable = true;
+        # look into how to do xdg for multiple hosts probably better
         vr.enable = true;
-        discord.enable = true;
         etc.enable = true;
       };
 
