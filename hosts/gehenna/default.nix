@@ -35,20 +35,12 @@ inputs.nixpkgs.lib.nixosSystem {
       
       security.rtkit.enable = true;
 
-      services.xserver.videoDrivers = ["nvidia"];
+      nvidia.enable = true;
 
       # TODO: maybe make module or place in hardware.nix?
       hardware.graphics = {
         enable = true;
         enable32Bit = true;
-      };
-
-      hardware.nvidia = {
-        modesetting.enable = true;
-        powerManagement.enable = false;
-        powerManagement.finegrained = false;
-        open = true;
-        nvidiaSettings = true;
       };
       
       # TODO: is needed?
@@ -67,6 +59,7 @@ inputs.nixpkgs.lib.nixosSystem {
       idk.enable = true;
 
       unity.enable = true;
+      steam.enable = true;
       programs.nix-ld.enable = true;
 
       home = {
@@ -94,13 +87,10 @@ inputs.nixpkgs.lib.nixosSystem {
         tmux.enable = true;
         bemenu.enable = true;
         bitwarden.enable = true;
-        steam.enable = true;
+        vr.enable = true;
         discord.enable = true;
         etc.enable = true;
       };
-
-      programs.steam.enable = true;
-      hardware.steam-hardware.enable = true;
 
       # >,..,<
       system.stateVersion = "26.05"; 
