@@ -56,7 +56,6 @@ inputs.nixpkgs.lib.nixosSystem {
       # not working ?
       xdg.enable = true;
 
-      discord.enable = true;
       unity.enable = true;
       steam.enable = true;
       programs.nix-ld.enable = true;
@@ -79,12 +78,14 @@ inputs.nixpkgs.lib.nixosSystem {
           output = { 
             "DP-3" = { 
               mode = "1920x1080@239.760Hz"; 
+              adaptive_sync = "off";
             };
           };
         };
         foot.enable = true;
         tmux.enable = true;
         bemenu.enable = true;
+        discord.enable = true;
         bitwarden.enable = true;
         # look into how to do xdg for multiple hosts probably better
         vr.enable = true;

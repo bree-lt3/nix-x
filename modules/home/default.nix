@@ -16,6 +16,7 @@
     ./bemenu.nix
     ./bitwarden.nix
     ./vr.nix
+    ./discord.nix
     ./etc.nix
   ];
 
