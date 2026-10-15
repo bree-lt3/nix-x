@@ -1,5 +1,4 @@
-
-{ config, lib, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   options.idk.enable = lib.mkEnableOption "idk";
@@ -9,6 +8,8 @@
       "discord-unwrapped"
     ];
 
-    programs.discord.enable = true;
+    environment.systemPackages = with pkgs; [
+      discord-ptb
+    ];
   };
 }
