@@ -17,6 +17,6 @@
       XRT_COMPOSITOR_COMPUTE = "1";
     };
 
-    environment.systemPackages = [ pkgs.xrizer ];  
+    environment.systemPackages = [ pkgs.xrizer pkgs.wayvr ];  
   };
 }
