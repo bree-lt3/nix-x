@@ -6,6 +6,7 @@ inputs.nixpkgs.lib.nixosSystem {
   modules = [ 
     ./hardware.nix
     inputs.home-manager.nixosModules.default
+    inputs.nixpkgs-xr.nixosModules.nixpkgs-xr
     ../../modules/nixos
     ../../modules/home
     {
@@ -56,6 +57,7 @@ inputs.nixpkgs.lib.nixosSystem {
       # not working ?
       xdg.enable = true;
 
+      vr.enable = true;
       unity.enable = true;
       steam.enable = true;
       programs.nix-ld.enable = true;
