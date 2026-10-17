@@ -85,7 +85,7 @@ inputs.nixpkgs.lib.nixosSystem {
           output = { 
             "DP-3" = { 
               mode = "1920x1080@239.760Hz"; 
-              #adaptive_sync = "off";
+              adaptive_sync = "off";
             };
           };
         };
