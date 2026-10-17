@@ -43,6 +43,10 @@ inputs.nixpkgs.lib.nixosSystem {
         enable = true;
         enable32Bit = true;
       };
+
+      # cpu to performance
+      powerManagement.enable = true;
+      powerManagement.cpuFreqGovernor = "performance";
       
       # TODO: is needed?
       services.libinput.enable = true;
@@ -81,7 +85,7 @@ inputs.nixpkgs.lib.nixosSystem {
           output = { 
             "DP-3" = { 
               mode = "1920x1080@239.760Hz"; 
-              adaptive_sync = "off";
+              #adaptive_sync = "off";
             };
           };
         };
