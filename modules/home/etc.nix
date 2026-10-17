@@ -15,7 +15,6 @@
         librewolf
         obs-studio
 
-        gamemode
         zathura
         krita
         blender
