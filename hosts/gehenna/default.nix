@@ -61,6 +61,7 @@ inputs.nixpkgs.lib.nixosSystem {
       unity.enable = true;
       steam.enable = true;
       programs.nix-ld.enable = true;
+      gamemode.enable = true;
 
       home = {
         bash.enable = true;
@@ -91,7 +92,6 @@ inputs.nixpkgs.lib.nixosSystem {
         bitwarden.enable = true;
         # look into how to do xdg for multiple hosts probably better
         vr.enable = true;
-        gamemode.enable = true;
         etc.enable = true;
       };
 

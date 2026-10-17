@@ -17,7 +17,6 @@
     ./bitwarden.nix
     ./vr.nix
     ./discord.nix
-    ./gamemode.nix
     ./etc.nix
   ];
 
