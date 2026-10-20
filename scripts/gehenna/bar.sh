@@ -1,9 +1,9 @@
-# WIFI
-WIFI=$(nmcli -g NAME,TYPE connection show --active | grep 802-11-wireless)
-if [[ -z $WIFI ]]; then
-  WIFINAME="none"
+# Connection Status
+CON=$(nmcli -g NAME,TYPE connection show --active | grep 802-11-wireless)
+if [[ -z $CON ]]; then
+  CONSTATUS="Down"
 else
-  WIFINAME="${WIFI%%:*}"
+  CONSTATUS="Up"
 fi
 
 # Volume
@@ -24,4 +24,4 @@ fi
 # Date
 DATETIME=$(date +"%D %T")
 
-echo [CON: $WIFINAME] [VOL: $VOLPERCENT] [$DATETIME]
+echo [CON: $CONSTATUS] [VOL: $VOLPERCENT] [$DATETIME]
