@@ -1,6 +1,10 @@
-{ inputs, ... }:
+{ inputs, config, ... }:
 
 {
+  home-manager.extraSpecialArgs = {
+    hostName = config.networking.hostName;
+  };
+  
   home-manager.sharedModules = [
     inputs.nixvim.homeModules.nixvim
   ];

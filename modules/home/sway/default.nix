@@ -1,6 +1,7 @@
 { config, lib, ... }:
 let 
 
+hostName = config.networking.hostName;
 mod = "Mod4";
 left = "h";
 down = "j";
@@ -103,7 +104,7 @@ in {
         bars = [{
           position = "top";
           command = "swaybar";
-          statusCommand = "while $HOME/nix-x/scripts/bar.sh; do sleep 1; done";
+          statusCommand = "while $HOME/nix-x/scripts/${hostName}/bar.sh; do sleep 1; done";
           trayOutput = "null";
           fonts = {
             names = [ "IBM Plex Mono" ];
