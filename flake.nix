@@ -19,14 +19,10 @@
     };
   };
 
-  outputs = { self, nixpkgs, ... } @ inputs:
-    let
-
-    in
-    {
-     nixosConfigurations = {
-        gehenna = import ./hosts/gehenna { inherit inputs; };
-        utero   = import ./hosts/utero { inherit inputs; };
-      };
+  outputs = { self, nixpkgs, ... } @ inputs: {
+   nixosConfigurations = {
+      gehenna = import ./hosts/gehenna { inherit inputs; };
+      utero   = import ./hosts/utero { inherit inputs; };
     };
+  };
 }
