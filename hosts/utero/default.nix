@@ -33,7 +33,6 @@ inputs.nixpkgs.lib.nixosSystem {
         enable = true;
         enable32Bit = true;
       };
-      hardware.opengl.enable = true;
 
       # TODO: is needed?
       services.libinput.enable = true;
