@@ -1,5 +1,5 @@
 # Connection Status
-CON=$(nmcli -g NAME,TYPE connection show --active | grep 802-11-wireless)
+CON=$(nmcli -g NAME,TYPE connection show --active | grep ethernet)
 if [[ -z $CON ]]; then
   CONSTATUS="Down"
 else
