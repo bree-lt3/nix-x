@@ -1,9 +1,9 @@
 # Connection Status
 CON=$(nmcli -g NAME,TYPE connection show --active | grep ethernet)
 if [[ -z $CON ]]; then
-  CONSTATUS="Down"
+  CONSTATUS="DOWN"
 else
-  CONSTATUS="Up"
+  CONSTATUS="UP"
 fi
 
 # Volume
