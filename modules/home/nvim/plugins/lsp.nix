@@ -5,6 +5,7 @@
     lsp = {
       enable = true;
       servers = {
+        astro.enable = true;
         clangd.enable = true;
         cssls.enable = true;
         emmet_ls.enable = true;
