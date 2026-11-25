@@ -16,8 +16,7 @@ in
 
     environment.systemPackages = with pkgs; [
       unityhub
-      vrc-get
-      alcom
+      #alcom
       unityFhs
     ];
   };

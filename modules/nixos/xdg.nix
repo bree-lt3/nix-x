@@ -2,7 +2,7 @@
 
 { 
   options.xdg.enable = lib.mkEnableOption "xdg";
-  config = lib.mkIf config.tlp.enable {
+  config = lib.mkIf config.xdg.enable {
     xdg = {
       portal = {
         enable = true;
